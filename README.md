@@ -25,10 +25,12 @@ $$
 m = \dot{m} \times \Delta t
 $$
 
-Where:
-  - \(\ dot{m}) = Mass flow rate (kg/s)
-  - \( m \) = Mass (kg)
-  - \(\Delta t \) = Time interval (s)
+\(\dot{m}\) = Mass flow rate (kg/s)
+
+\(m\) = Mass (kg)
+
+\(\Delta t\) = Time interval (s)
+
  
 
     ### **Method 2:** 
