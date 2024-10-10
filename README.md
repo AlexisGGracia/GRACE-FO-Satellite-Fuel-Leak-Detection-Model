@@ -14,19 +14,20 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 
 ### **Method 2:** 
 
-  - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation:
+  - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
 
 $$
-P = \frac{nRT}{V - nb} - \frac{a}{V^2}
+\left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
 $$
 
 Where:
-  - \(P\) is the pressure inside the tank,
-  - \(V\) is the volume,
-  - \(n\) is the number of moles,
-  - \(R\) is the gas constant (8.314 J/mol·K),
-  - \(T\) is the temperature,
-  - \(a\) and \(b\) are Van der Waals constants.
+  - \(P\) = Pressure of the gas (Pa)
+  - \(V\) = Volume of the tank (m³)
+  - \(n\) = Number of moles of gas (mol)
+  - \(R\) = Universal gas constant (8.314 J/mol·K)
+  - \(T\) = Temperature (K)
+  - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
+  - \(b\) = Van der Waals constant (m³/mol)
 
 ### Mass Flow Rate Equation (Solving for Mass):
 
@@ -43,13 +44,14 @@ m = \dot{m} \times \Delta t
 $$
 
 Where:
-  - \( \dot{m} \) is the mass flow rate (kg/s),
-  - \( m \) is the mass (kg),
-  - \( \Delta t \) is the time interval (seconds).
+  - \( \dot{m} \) = Mass flow rate (kg/s)
+  - \( m \) = Mass (kg)
+  - \( \Delta t \) = Time interval (s)
 
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 
 
