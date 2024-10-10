@@ -6,7 +6,7 @@ In this project, I studied the evolution of the fuel leak of the GRACE-FO satell
 
 **METHOD 1:**
 
-  -Using the mass flow rates to estimate the ideal mass inside of the tanks assuming no leaks 
+  - Using the mass flow rates to estimate the ideal mass inside of the tanks assuming no leaks 
   
 **METHOD 2:** 
 
