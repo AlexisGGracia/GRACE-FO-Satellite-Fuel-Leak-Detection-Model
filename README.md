@@ -11,37 +11,6 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 ### **Method 1:**
 
   - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates.
-
-    $$
-\left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
-$$
-
-Where:
-  - \(P\) = Pressure of the gas (Pa)
-  - \(V\) = Volume of the tank (m³)
-  - \(n\) = Number of moles of gas (mol)
-  - \(R\) = Universal gas constant (8.314 J/mol·K)
-  - \(T\) = Temperature (K)
-  - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
-  - \(b\) = Van der Waals constant (m³/mol)
-
-### **Method 2:** 
-
-  - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
-
-$$
-\left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
-$$
-
-Where:
-  - \(P\) = Pressure of the gas (Pa)
-  - \(V\) = Volume of the tank (m³)
-  - \(n\) = Number of moles of gas (mol)
-  - \(R\) = Universal gas constant (8.314 J/mol·K)
-  - \(T\) = Temperature (K)
-  - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
-  - \(b\) = Van der Waals constant (m³/mol)
-
 ### Mass Flow Rate Equation (Solving for Mass):
 
 The mass flow rate equation is typically given by:
@@ -60,6 +29,25 @@ Where:
   - \( \dot{m} \) = Mass flow rate (kg/s)
   - \( m \) = Mass (kg)
   - \( \Delta t \) = Time interval (s)
+ 
+
+### **Method 2:** 
+
+  - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
+
+$$
+\left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
+$$
+
+Where:
+  - \(P\) = Pressure of the gas (Pa)
+  - \(V\) = Volume of the tank (m³)
+  - \(n\) = Number of moles of gas (mol)
+  - \(R\) = Universal gas constant (8.314 J/mol·K)
+  - \(T\) = Temperature (K)
+  - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
+  - \(b\) = Van der Waals constant (m³/mol)
+
 
 ## Purpose
 
