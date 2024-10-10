@@ -1,18 +1,25 @@
-# GRACE-FO-Satellite-Fuel-Leak-Detection-Model in Python
+# GRACE-FO Satellite Fuel Leak Detection Model in Python
 
-# Introduction
+## Introduction
 
-In this project, I studied the evolution of the fuel leak of the GRACE-FO satellite. We considers mass flow rates of the thrusters, time intervals of thruster usage( delta-t), time interval of activation of thrusters, Internal pressure of the tanks, temperature in the zenith and nadir direction of the fuel tanks. In this projecgt, we study the evolution of the leak but model is a work in progress that is continously under development as we perform research on how we can translate our findings into a Markov Chain to predict the behavior of the fuel leak in the future for orbit raise strategies. During this research, we consider two methods to estimate and confirm the fuel leak of the tanks:
+In this project, I analyze the evolution of a fuel leak in the GRACE-FO satellite. The model considers several key factors, including the mass flow rates of the thrusters, the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks, and the temperature in both the zenith and nadir directions of the fuel tanks. 
 
-**METHOD 1:**
+This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. The ultimate goal is to translate these findings into a Markov Chain model to predict future fuel leak behavior, which is crucial for orbit-raising strategies. 
 
-  - Using the mass flow rates to estimate the ideal mass inside of the tanks assuming no leaks 
+During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
+
+### **Method 1:**
+
+  - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates. 
   
-**METHOD 2:** 
+### **Method 2:** 
 
-  - Using Vander Waals Equation to find the mass inside of the fuel tanks at all times
+  - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation.
 
-Who is it for? This project was developed at The University of Texas at Austin as part of my Final Project for my Spacecraft Dynamics course taken during Fall 2023
+## Purpose
+
+This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 # Code Breakdown and Workflow
 
