@@ -3,9 +3,13 @@
 # Introduction
 
 In this project, I studied the evolution of the fuel leak of the GRACE-FO satellite. We considers mass flow rates of the thrusters, time intervals of thruster usage( delta-t), time interval of activation of thrusters, Internal pressure of the tanks, temperature in the zenith and nadir direction of the fuel tanks. In this projecgt, we study the evolution of the leak but model is a work in progress that is continously under development as we perform research on how we can translate our findings into a Markov Chain to predict the behavior of the fuel leak in the future for orbit raise strategies. During this research, we consider two methods to estimate and confirm the fuel leak of the tanks:
+
 ** METHOD 1: **
+
   -Using the mass flow rates to estimate the ideal mass inside of the tanks assuming no leaks 
+  
 ** METHOD 2: **
+
   - Using Vander Waals Equation to find the mass inside of the fuel tanks at all times
 
 Who is it for? This project was developed at The University of Texas at Austin as part of my Final Project for my Spacecraft Dynamics course taken during Fall 2023
