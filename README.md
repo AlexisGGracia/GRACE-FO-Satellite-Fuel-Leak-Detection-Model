@@ -2,23 +2,25 @@
 
 ## Introduction
 
-In this project, I analyze the evolution of a fuel leak in the GRACE-FO satellite. The model considers several key factors, including the mass flow rates of the thrusters, the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks, and the temperature in both the zenith and nadir directions of the fuel tanks. 
+In this project, I analyze the evolution of a fuel leak in the GRACE-FO satellite. The model considers several key factors, including the mass flow rates of the thrusters, the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks, and the temperature in both the zenith and nadir directions of the fuel tanks.
 
-This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. The ultimate goal is to translate these findings into a Markov Chain model to predict future fuel leak behavior, which is crucial for orbit-raising strategies. 
+This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. The ultimate goal is to translate these findings into a Markov Chain model to predict future fuel leak behavior, which is crucial for orbit-raising strategies.
 
 During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
 ### **Method 1:**
 
-  - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates. 
-  
+  - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates.
+
 ### **Method 2:** 
 
   - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation:
 
-  ![Van der Waals equation](https://latex.codecogs.com/png.latex?P%28V%29%20%3D%20%5Cfrac%7BnRT%7D%7BV-nb%7D%20-%20%5Cfrac%7Ba%7D%7BV%5E2%7D)
+$$
+P(V) = \frac{nRT}{V-nb} - \frac{a}{V^2}
+$$
 
-  Where:
+Where:
   - \( P \) is the pressure inside the tank,
   - \( V \) is the volume,
   - \( n \) is the number of moles,
@@ -30,9 +32,11 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 
 The mass flow rate equation is used to calculate the flow of fuel through the thrusters:
 
-  ![Mass Flow Rate equation](https://latex.codecogs.com/png.latex?%5Cdot%7Bm%7D%20%3D%20C_d%20A%20%5Csqrt%7B%5Cfrac%7B2%20%5CDelta%20P%7D%7B%5Crho%7D%7D)
+$$
+\dot{m} = C_d A \sqrt{\frac{2 \Delta P}{\rho}}
+$$
 
-  Where:
+Where:
   - \( \dot{m} \) is the mass flow rate (kg/s),
   - \( C_d \) is the discharge coefficient,
   - \( A \) is the cross-sectional area,
@@ -42,6 +46,7 @@ The mass flow rate equation is used to calculate the flow of fuel through the th
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 
 
