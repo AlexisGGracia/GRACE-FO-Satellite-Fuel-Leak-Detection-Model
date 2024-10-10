@@ -15,6 +15,8 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 ### **Method 2:** 
 
   - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation.
+  - ![equation](https://latex.codecogs.com/png.latex?P(V)=\frac{nRT}{V-nb}-\frac{a}{V^2})
+
 
 ## Purpose
 
