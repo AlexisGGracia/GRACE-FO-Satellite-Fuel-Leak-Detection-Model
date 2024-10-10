@@ -17,35 +17,40 @@ During this research, I explore two methods to estimate and verify fuel leaks in
   - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation:
 
 $$
-P(V) = \frac{nRT}{V-nb} - \frac{a}{V^2}
+P = \frac{nRT}{V - nb} - \frac{a}{V^2}
 $$
 
 Where:
-  - \( P \) is the pressure inside the tank,
-  - \( V \) is the volume,
-  - \( n \) is the number of moles,
-  - \( R \) is the gas constant (8.314 J/mol·K),
-  - \( T \) is the temperature,
-  - \( a \) and \( b \) are Van der Waals constants.
+  - \(P\) is the pressure inside the tank,
+  - \(V\) is the volume,
+  - \(n\) is the number of moles,
+  - \(R\) is the gas constant (8.314 J/mol·K),
+  - \(T\) is the temperature,
+  - \(a\) and \(b\) are Van der Waals constants.
 
-### Mass Flow Rate Equation:
+### Mass Flow Rate Equation (Solving for Mass):
 
-The mass flow rate equation is used to calculate the flow of fuel through the thrusters:
+The mass flow rate equation is typically given by:
 
 $$
-\dot{m} = C_d A \sqrt{\frac{2 \Delta P}{\rho}}
+\dot{m} = \frac{m}{\Delta t}
+$$
+
+To solve for the mass \(m\), we rearrange the equation:
+
+$$
+m = \dot{m} \times \Delta t
 $$
 
 Where:
   - \( \dot{m} \) is the mass flow rate (kg/s),
-  - \( C_d \) is the discharge coefficient,
-  - \( A \) is the cross-sectional area,
-  - \( \Delta P \) is the pressure difference,
-  - \( \rho \) is the fluid density.
+  - \( m \) is the mass (kg),
+  - \( \Delta t \) is the time interval (seconds).
 
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 
 
