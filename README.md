@@ -8,7 +8,7 @@ This project aims to study the evolution of the leak, though the model is a work
 
 During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
-    ### **Method 1:**
+### **Method 1:**
 
   - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates.
 ### Mass Flow Rate Equation (Solving for Mass):
