@@ -16,7 +16,7 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 
   - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation:
 
-  ![Van der Waals equation](https://latex.codecogs.com/png.latex?P(V)%20%3D%20%5Cfrac%7BnRT%7D%7BV-nb%7D%20-%20%5Cfrac%7Ba%7D%7BV%5E2%7D)
+  ![Van der Waals equation](https://latex.codecogs.com/png.latex?%5Ccolor%7Bwhite%7D%20P%28V%29%20%3D%20%5Cfrac%7BnRT%7D%7BV-nb%7D%20-%20%5Cfrac%7Ba%7D%7BV%5E2%7D)
   
   Where:
   - \( P \) is the pressure inside the tank,
@@ -30,7 +30,7 @@ During this research, I explore two methods to estimate and verify fuel leaks in
 
 The mass flow rate equation is used to calculate the flow of fuel through the thrusters:
 
-  ![Mass Flow Rate equation](https://latex.codecogs.com/png.latex?%5Cdot%7Bm%7D%20%3D%20C_d%20A%20%5Csqrt%7B%5Cfrac%7B2%20%5CDelta%20P%7D%7B%5Crho%7D%7D)
+  ![Mass Flow Rate equation](https://latex.codecogs.com/png.latex?%5Ccolor%7Bwhite%7D%20%5Cdot%7Bm%7D%20%3D%20C_d%20A%20%5Csqrt%7B%5Cfrac%7B2%20%5CDelta%20P%7D%7B%5Crho%7D%7D)
   
   Where:
   - \( \dot{m} \) is the mass flow rate (kg/s),
@@ -42,6 +42,7 @@ The mass flow rate equation is used to calculate the flow of fuel through the th
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 
 
