@@ -14,13 +14,35 @@ During this research, I explore two methods to estimate and verify fuel leaks in
   
 ### **Method 2:** 
 
-  - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation.
-  - ![equation](https://latex.codecogs.com/png.latex?P(V)=\frac{nRT}{V-nb}-\frac{a}{V^2})
+  - Calculating the mass inside the fuel tanks at all times using the Van der Waals equation:
 
+  ![Van der Waals equation](https://latex.codecogs.com/png.latex?P(V)%20%3D%20%5Cfrac%7BnRT%7D%7BV-nb%7D%20-%20%5Cfrac%7Ba%7D%7BV%5E2%7D)
+  
+  Where:
+  - \( P \) is the pressure inside the tank,
+  - \( V \) is the volume,
+  - \( n \) is the number of moles,
+  - \( R \) is the gas constant (8.314 J/mol·K),
+  - \( T \) is the temperature,
+  - \( a \) and \( b \) are Van der Waals constants.
+
+### Mass Flow Rate Equation:
+
+The mass flow rate equation is used to calculate the flow of fuel through the thrusters:
+
+  ![Mass Flow Rate equation](https://latex.codecogs.com/png.latex?%5Cdot%7Bm%7D%20%3D%20C_d%20A%20%5Csqrt%7B%5Cfrac%7B2%20%5CDelta%20P%7D%7B%5Crho%7D%7D)
+  
+  Where:
+  - \( \dot{m} \) is the mass flow rate (kg/s),
+  - \( C_d \) is the discharge coefficient,
+  - \( A \) is the cross-sectional area,
+  - \( \Delta P \) is the pressure difference,
+  - \( \rho \) is the fluid density.
 
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
 
 
 # Code Breakdown and Workflow
