@@ -25,15 +25,17 @@ $$
 m = \dot{m} \times \Delta t
 $$
 
-\(\dot{m}\) = Mass flow rate (kg/s)
+where:
 
-\(m\) = Mass (kg)
+  \(\dot{m}\) = Mass flow rate (kg/s)
 
-\(\Delta t\) = Time interval (s)
+  \(m\) = Mass (kg)
+
+  \(\Delta t\) = Time interval (s)
 
  
 
-    ### **Method 2:** 
+ ### **Method 2:** 
 
   - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
 
