@@ -27,11 +27,12 @@ $$
 
 where:
 
-  \(\dot{m}\) = Mass flow rate (kg/s)
+  $\dot{m}$ = Mass flow rate (kg/s)
 
-  \(m\) = Mass (kg)
+  $m$ = Mass (kg)
 
-  \(\Delta t\) = Time interval (s)
+  $\Delta t$ = Time interval (s)
+
 
  
 
