@@ -27,7 +27,7 @@ $$
 
 Where:
 $$
-  - \dot{m} = Mass flow rate (kg/s)
+   \dot{m} = Mass flow rate (kg/s)
   - \( m \) = Mass (kg)
   - \(\Delta t \) = Time interval (s)
 $$
