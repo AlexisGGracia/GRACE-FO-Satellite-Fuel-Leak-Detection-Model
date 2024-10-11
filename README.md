@@ -33,7 +33,6 @@ where:
 
 
  
-
  ### **Method B:** 
 
   - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
@@ -56,10 +55,6 @@ Where:
 
 - To confirm if we have a leak, we compare the results from method A and method B. Given that method A computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method B computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method A and B, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
 
-
-## Purpose
-
-This project is part of my undergraduate research at The University of Texas Center for Space Research.
 
 
 # Code Breakdown and Workflow
@@ -122,24 +117,7 @@ $$
                              Additionally, the derivative evaluated at some x values does not result in a small value close to zero for all points tested.
                              Therefore, it will not overshoot the root finding process.
                         
-                        
 
-
-  
-## Requirements
-
-To run this project, you will need the following software and tools:
-
-- **MATLAB**: Ensure that MATLAB is installed. You can download it from [here](https://www.mathworks.com/products/matlab.html).
-- **MATLAB Toolboxes**: The following toolboxes are recommended for running the simulations:
-  - Aerospace Toolbox
-  - Mapping Toolbox
-  - MATLAB functions which are included as separate files under this project 
-
-### Additional Information:
-The project uses MATLAB's built-in functions and toolboxes to perform orbital simulations, including two-body propagation, J2 perturbations, and groundtrack generation.
-
-You can install necessary MATLAB packages directly through the MATLAB interface.
 
 
 # Results
@@ -169,18 +147,22 @@ In this section, I have included the mass versus time plots for the month of Jul
 
 <img width="903" alt="Screenshot 2024-10-11 at 1 27 54 AM" src="https://github.com/user-attachments/assets/e3b8b6da-05c0-45d5-be06-a9f6a3d2ff8d">
 
+## Important Observations of Results:
+- The plots for mass vs time using method B for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temepratures. 
 
 
+## Purpose
+
+This project is part of my undergraduate research at The University of Texas Center for Space Research.
 
 
+### **Requirements**
+
+- **Python**: Ensure you have Python installed on your system. You can download and install Python from the official [Python website](https://www.python.org/downloads/).
+  
+- **NASA Level 1A Public Data Access**: You need access to NASA Level 1A public data available through the [Physical Oceanography Distributed Active Archive Center (PO.DAAC)](https://podaac.jpl.nasa.gov/). The data can be accessed by creating a free NASA Earthdata account and downloading the required datasets from the PO.DAAC repository.
 
 
-
-
-
-## Citations
-
-H. Skopinski and K. G. Johnson, *"Determination of Azimuth Angle at Burnout for Placing a Satellite Over a Selected Earth Position"*, NASA Tech Note D-233, September 1960. [NASA Technical Report](https://ntrs.nasa.gov/citations/19980227091)
 
 
 ## Contributor
