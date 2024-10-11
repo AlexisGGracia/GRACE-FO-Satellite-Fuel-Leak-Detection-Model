@@ -156,12 +156,6 @@ In this section, I have included the mass versus time plots for the month of Jul
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
 
 
-### **Requirements**
-
-- **Python**: Ensure you have Python installed on your system. You can download and install Python from the official [Python website](https://www.python.org/downloads/).
-  
-- **NASA Level 1A Public Data Access**: You need access to NASA Level 1A public data available through the [Physical Oceanography Distributed Active Archive Center (PO.DAAC)](https://podaac.jpl.nasa.gov/). The data can be accessed by creating a free NASA Earthdata account and downloading the required datasets from the PO.DAAC repository.
-
 
 
 
