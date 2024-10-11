@@ -91,9 +91,9 @@ This section provides a detailed explanation of the logic and steps involved in 
 7. **Use Newton Raphson Method to find the number of mols from vander waals equation**
     - Approximating the root of a vander waals modified equation using the **Newton-Raphson method**:
 
-    $$
-    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-    $$
+        $$
+        x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+        $$
     
     Where:
       - $x_{n+1}$ is the next approximation of the root
