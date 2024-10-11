@@ -2,9 +2,14 @@
 
 ## Introduction
 
-In this project, I analyze the evolution of a fuel leak in the GRACE-FO satellite. The model considers several key factors, including the mass flow rates of the thrusters, the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks, and the temperature in both the zenith and nadir directions of the fuel tanks.
+In this project, I analyze the evolution of a fuel leak in the GRACE-FO twin satellite. The model considers several key factors, including the mass flow rates of 32 thrusters (16 thrusters per satellite), the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks (2 tanks per satellite), and the temperature in both the zenith and nadir directions of the fuel tanks.
 
 This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. The ultimate goal is to translate these findings into a Markov Chain model to predict future fuel leak behavior, which is crucial for orbit-raising strategies.
+
+### Important Information:
+
+- Further information regarding the integration of Markov Chains and usage of this model is currently under development as this is on going research
+- No all data and code files can be shared at this time since they rest of the files are currently classified until further notice
 
 During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
@@ -162,10 +167,6 @@ This project is part of my undergraduate research at The University of Texas Cen
   
 - **NASA Level 1A Public Data Access**: You need access to NASA Level 1A public data, available through the [Physical Oceanography Distributed Active Archive Center (PO.DAAC)](https://podaac.jpl.nasa.gov/). You can access the data by creating a free [NASA Earthdata account](https://urs.earthdata.nasa.gov/) and downloading the required datasets from the PO.DAAC repository.
 
-### Important Information:
-
-- Further information regarding the integration of Markov Chains and usage of this model is currently under development as this is on going research
-- No all data and code files can be shared at this time since they rest of the files are currently classified until further notice
 
 ## Contributor
 
