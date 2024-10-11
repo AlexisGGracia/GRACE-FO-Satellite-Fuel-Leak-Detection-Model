@@ -42,7 +42,7 @@ where:
  
  ### **Method B:** 
 
-  - Calculating the mass inside the fuel tanks instantaneously using the **Van der Waals modified equation**:
+  - Calculating the instantaneous mass inside the fuel tanks using the **Van der Waals modified equation**:
 
 $$
 \left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
