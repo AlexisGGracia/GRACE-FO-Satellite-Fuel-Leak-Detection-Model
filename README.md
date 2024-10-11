@@ -52,52 +52,66 @@ Where:
   - \(b\) = Van der Waals constant (m³/mol)
 
 
+## How do we confirm if we have a leak in the fuel system? 
+
+- To confirm if we have a leak, we compare the results from method 1 and method 2. Given that method 1 computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method 2 computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method 1 and 2, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
+
+
 ## Purpose
 
 This project is part of my undergraduate research at The University of Texas Center for Space Research.
-
-
-
-
-
-
 
 
 # Code Breakdown and Workflow
 
 This section provides a detailed explanation of the logic and steps involved in the code.
 
-1. **Defines parameters such as semi-major axis, eccentricity, Greenwich Sidereal Meridian Time (GMST) at burnout, etc.**
+1. **Upload data into python**
+   - I have included a for loop in this section such that it processes mutliple files using the datetime function to process anual data
+   - Example:
+   ```Python
+   base_dir = '/Volumes/GRACEFO/GRACE-FODATA/'
+   filename_template = 'gracefo_1A_{date}_RL04.ascii.noLRI/TNK1A_{date}_C_04.txt'  # Define the template
+   months = {'01':31,'02':29, '03':31} 
+   filenames = []
 
-   - Orbital elements such as semi-major axis, eccentricity are determined based on mission constraints such as altitude of orbiting spacecraft and desired orbit type.
-   - Parameters defined are as follows:
-
-   ```MATLAB
-   % Defining parameters
-   format longG
-   a = 6500;                       % Semi-major axis (km)
-   e = 0.001;                      % Orbit's eccentricity
-   theta1 = 20*pi/180;             % Initial true anomaly at burnout
-   GSMT = 0;                       % Greenwich Sidereal Meridian time at burnout
-   mu_earth = 398600.4415;         % Gravitational parameter of Earth (km^3/s^2)
-   R_earth = 6378.1363;            % Radius of Earth (km)
-   J2 = 0.0010826267;              % J2 perturbations due to Earth's obliqueness
-   w_earth = 2*pi / 86164;         % Earth's rotation rate
-   n = 10;
-   iterations = 4;
-   i = 1;                          % Counting variable
-   f = 3.353*10^-3;               % Earth's obliqueness constant
-   height = 0;
-
+   # Generate filenames for each day in February and March 2020
+   for month, days in months.items():
+    for day in range(1, days + 1):
+        date_str = f'2020-{month}-{day:02d}'  # Format date string with numeric month
+        month_dir = f'{datetime.date(2020, int(month), 1):%B}_2020/'  # Convert numeric month to full month name
+        filename = base_dir + month_dir + filename_template.format(date=date_str)
+        filenames.append(filename)
      
          
-2. **Using Katherine Johnson and Skopinski NASA technical notes, determine the burnout azimuth of the spacecraft.**
+2. **Developed a function to skip the introduction header that is given for each data file downloaded from NASA po.daac.**
 
-3. **Determine the orbital elements of the satellite at burnout** to achieve the goal of passing over a desired position after a precise number of revolutions.
+4. **Extract the pressure from tank 1 and 2 to be used for method 2
+5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2
+6. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems
+7. **Use Newton Raphson Method to find the number of mols from vander waals equation
+    # Newton-Raphson Method
 
-4. **Propagate the orbit using ODE45 based on two-body dynamics**, including J2 perturbations.
+    The **Newton-Raphson method** is an iterative algorithm for finding successively better approximations to the roots (or zeroes) of a real-valued function.
 
-5. **Determine the accuracy of the solution by:**
+    The Newton-Raphson formula is defined as:
+
+    $$
+    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+    $$
+
+    Where:
+    - \(x_{n+1}\) is the next approximation,
+    - \(x_n\) is the current approximation,
+    - \(f(x_n)\) is the value of the function at \(x_n\),
+    - \(f'(x_n)\) is the derivative of the function at \(x_n\).
+
+    The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
+    
+
+9. **Propagate the orbit using ODE45 based on two-body dynamics**, including J2 perturbations.
+
+10. **Determine the accuracy of the solution by:**
    - (a) **Generating groundtracks for the satellite**, including coastlines and the desired location on the map.
    - (b) **Plotting the satellite elevation relative to the desired location** over the time period when it should pass overhead.
 
