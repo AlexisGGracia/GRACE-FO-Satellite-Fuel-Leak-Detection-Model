@@ -1,4 +1,4 @@
-# GRACE-FO Satellite Fuel Leak Detection Model in Python
+# GRACE-FO Twin Satellite Fuel Leak Detection Model in Python
 
 ## Introduction
 
