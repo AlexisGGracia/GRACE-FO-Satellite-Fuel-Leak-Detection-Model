@@ -153,7 +153,7 @@ In this section, I have included the mass versus time plots for the month of Jul
 ## Method A Daily Mass vs Time average per hour: 
 
 
-<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/e9be177f-8b7c-435d-9f50-a5520da74971">
+<img width="935" alt="Screenshot 2024-10-11 at 1 27 07 AM" src="https://github.com/user-attachments/assets/eb262d85-4c27-407b-9a56-e11b1fcf68da">
 
 
 ## Method A Monthly average per day Mass vs Time for Tanks C and D: 
