@@ -88,8 +88,9 @@ This section provides a detailed explanation of the logic and steps involved in 
 4. **Extract the pressure from tank 1 and 2 to be used for method 2**
 5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
 6. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
-7. **Use Newton Raphson Method to find the number of mols from vander waals equation**
-    - Approximating the root of a vander waals modified equation using the **Newton-Raphson method**:
+7. **Use Newton Raphson Method to find the number of moles from Van der Waals equation**
+    - Approximating the root of a Van der Waals modified equation using the **Newton-Raphson method**:
+
 $$
 x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
 $$
@@ -101,6 +102,7 @@ $$
       - $f'(x_n)$ is the derivative of the function at $x_n$
 
     The iteration continues until the difference between $x_{n+1}$ and $x_n$ is smaller than a predefined tolerance.
+
 
         
 
