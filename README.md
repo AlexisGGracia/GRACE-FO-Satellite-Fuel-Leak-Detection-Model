@@ -12,6 +12,11 @@ This project aims to study the evolution of the leak, though the model is a work
 - Not all data and code files can be shared at this time, pending further notice.
 - As a result, this document provides only a brief summary of the fuel leak model's development to showcase my knowledge of propulsion systems, research methodology, and coding skills.
 
+## Purpose
+
+This project is part of my undergraduate research at The University of Texas Center for Space Research.
+
+
 
 During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
@@ -157,10 +162,6 @@ In this section, I have included the mass versus time plots for the month of Jul
 ## Important Observations of Results:
 - The plots for mass vs time using method B for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temepratures. 
 
-
-## Purpose
-
-This project is part of my undergraduate research at The University of Texas Center for Space Research.
 
 
 ### Requirements
