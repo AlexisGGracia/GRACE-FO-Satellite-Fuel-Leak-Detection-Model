@@ -81,7 +81,7 @@ This section provides a detailed explanation of the logic and steps involved in 
          
 2. **Developed a function to skip the introduction header that is given for each data file downloaded from NASA po.daac (optional)**
 4. **Extract the pressure from tank A and B to be used for method B**
-5. **Extract temperature in the nadir and zenith direction of tanks A and B to be used for method 2**
+5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
 6. **Extract the mass flow rates, and time intervals
 7. **Use method A to find the ideal mass inside of the fuel tanks**
 8. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
