@@ -93,15 +93,14 @@ This section provides a detailed explanation of the logic and steps involved in 
 $$
 x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
 $$
-    
+
     Where:
       - $x_{n+1}$ is the next approximation of the root
       - $x_n$ is the current approximation
       - $f(x_n)$ is the value of the function at $x_n$
       - $f'(x_n)$ is the derivative of the function at $x_n$
-    
-    
-    The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
+
+    The iteration continues until the difference between $x_{n+1}$ and $x_n$ is smaller than a predefined tolerance.
 
         
 
