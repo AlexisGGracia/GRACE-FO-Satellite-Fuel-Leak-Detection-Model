@@ -85,27 +85,24 @@ This section provides a detailed explanation of the logic and steps involved in 
      
          
 2. **Developed a function to skip the introduction header that is given for each data file downloaded from NASA po.daac (optional)**
-
 4. **Extract the pressure from tank 1 and 2 to be used for method 2**
 5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
 6. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
 7. **Use Newton Raphson Method to find the number of mols from vander waals equation**
-        ### **Method 2:**
+    - Approximating the root of a vander waals modified equation using the **Newton-Raphson method**:
 
-- Approximating the root of a function using the **Newton-Raphson method**:
-
-$$
-x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-$$
-
-Where:
-  - $x_{n+1}$ is the next approximation of the root
-  - $x_n$ is the current approximation
-  - $f(x_n)$ is the value of the function at $x_n$
-  - $f'(x_n)$ is the derivative of the function at $x_n$
-
-
-The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
+    $$
+    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+    $$
+    
+    Where:
+      - $x_{n+1}$ is the next approximation of the root
+      - $x_n$ is the current approximation
+      - $f(x_n)$ is the value of the function at $x_n$
+      - $f'(x_n)$ is the derivative of the function at $x_n$
+    
+    
+    The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
 
         
 
