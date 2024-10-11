@@ -8,7 +8,7 @@ This project aims to study the evolution of the leak, though the model is a work
 
 During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
-### **Method 1:**
+### **Method A:**
 
   - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates.
 ### Mass Flow Rate Equation (Solving for Mass):
@@ -34,7 +34,7 @@ where:
 
  
 
- ### **Method 2:** 
+ ### **Method B:** 
 
   - Calculating the mass inside the fuel tanks at all times using the **Van der Waals modified equation**:
 
@@ -54,7 +54,7 @@ Where:
 
 ## How do we confirm if we have a leak in the fuel system? 
 
-- To confirm if we have a leak, we compare the results from method 1 and method 2. Given that method 1 computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method 2 computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method 1 and 2, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
+- To confirm if we have a leak, we compare the results from method A and method B. Given that method A computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method B computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method A and B, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
 
 
 ## Purpose
@@ -85,10 +85,12 @@ This section provides a detailed explanation of the logic and steps involved in 
      
          
 2. **Developed a function to skip the introduction header that is given for each data file downloaded from NASA po.daac (optional)**
-4. **Extract the pressure from tank 1 and 2 to be used for method 2**
-5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
-6. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
-7. **Use Newton Raphson Method to find the number of moles from Van der Waals equation**
+4. **Extract the pressure from tank A and B to be used for method B**
+5. **Extract temperature in the nadir and zenith direction of tanks A and B to be used for method 2**
+6. **Extract the mass flow rates, and time intervals
+7. **Use method A to find the ideal mass inside of the fuel tanks**
+8. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
+9. **Use Newton Raphson Method to find the number of moles from Van der Waals equation**
     - Approximating the root of a Van der Waals modified equation using the **Newton-Raphson method**:
 
 $$
@@ -107,55 +109,20 @@ $$
   The iteration continues until the difference between $x_{n+1}$ and $x_n$ is smaller than a predefined tolerance.
 
 
-        
+9. **Convert the number of mols to mass by multiplying times the molar mass of the propellant**
+11. **Plot mass vs time for both methods**
 
-
-
-
-
-
-
-
-
-
-
-
-
-9. **Propagate the orbit using ODE45 based on two-body dynamics**, including J2 perturbations.
-
-
-
-
-
-
-
-
-
-
-10. **Determine the accuracy of the solution by:**
-   - (a) **Generating groundtracks for the satellite**, including coastlines and the desired location on the map.
-   - (b) **Plotting the satellite elevation relative to the desired location** over the time period when it should pass overhead.
 
 
 ### Important Notes
 
-- **J2 Perturbations**: In this project, J2 perturbations (due to Earth's oblateness) are only considered during the **first iteration** of the burnout azimuth calculation.
-                        This is because the primary goal of this calculation is to determine the **initial azimuth angle at burnout** required to position the spacecraft
-                        over a target location immediately after burnout.
+- **Newton Raphson Method**: I decided to use Newton Raphson method to find the root of the functions since Vander Waals modified equation becomes a cubic function
+                             when rearrange having n as the unknown variable which presents three roots. Two roots are imaginary, and one real root which is the root
+                             we are interested in finding. Given that it really only has one root to find, you cannot miss the root by choosing the wrong guess.
+                             Additionally, the derivative evaluated at some x values does not result in a small value close to zero for all points tested.
+                             Therefore, it will not overshoot the root finding process.
                         
-  
-- **First Iteration**: During the first iteration, J2 perturbations are included to refine the orbital parameters (such as inclination and node) at the moment of burnout.
-                       These perturbations slightly affect the spacecraft’s trajectory and need to be accounted for to ensure accurate initial positioning.
-
-- **Subsequent Iterations**: For later iterations, J2 perturbations are **ignored**. This simplification is made because the subsequent calculations focus primarily on
-                             placing the satellite in the desired position **immediately after burnout**. The long-term effects of J2 on the orbit (such as orbital precession)
-                             are considered minimal for this immediate mission goal.
-
-- **Why This Approach?**: The neglect of J2 in later iterations is a practical choice, as the impact of J2 on short-term positioning is minimal compared to the complexity
-                          it would add to the calculations. For long-term mission planning, J2 and other perturbations should be modeled, but for the purposes of this burnout
-                          azimuth determination, they do not significantly affect the accuracy of the placement.
-
-
+                        
 
 
   
@@ -175,20 +142,41 @@ The project uses MATLAB's built-in functions and toolboxes to perform orbital si
 You can install necessary MATLAB packages directly through the MATLAB interface.
 
 
-# Visual Results
-In this section, I have included the groundtracks and an elevation plot relative to my desire location that demonstrates the accuracy of this model.
+# Results
+In this section, I have included the mass versus time plots for the month of July 2020. Each daily file was average per day to simplify the visual results and estimate on average what the mass is per day.
 
-## Groundtracks: 
 
-- **Groundtracks**: Starting location is along the coast of california and final destination is Austin, Texas. My mission was designed such that it completes this after 10th orbital periods.
-![Austin_Grountrack_Pic](https://github.com/user-attachments/assets/95396d28-e579-4f98-964d-ea55ac6b8ee7)
+- **Hand Calculation Comparasion**: This was done for July 1st 2020. Only one day is included in this report for simplification
+<img width="1091" alt="Screenshot 2024-10-11 at 1 26 44 AM" src="https://github.com/user-attachments/assets/b80d6c8c-07d3-4c6e-96de-b1ff192a8fc9">
+
     
-## Elevation vs Time plot: 
+## Method A Daily Mass vs Time average per hour: 
 
-- **Elevation Plot**: The elevation plot versus time plot helps track how the altitude of a spacecraft changes over time, providing valuable insight into its orbital path and visibility from a ground station or observation point. 
-   - Since the final destination is Austin, Texas (right above the ground station) it shows that the final elevation is 90 degrees
 
-![Austin_Texas_ELEVATION](https://github.com/user-attachments/assets/dbe41be2-75e8-48ee-8ffe-a421fe4186d0)
+<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/e9be177f-8b7c-435d-9f50-a5520da74971">
+
+
+## Method A Monthly average per day Mass vs Time for Tanks C and D: 
+
+<img width="835" alt="Screenshot 2024-10-11 at 1 27 38 AM" src="https://github.com/user-attachments/assets/5e37af29-69ad-4e8c-a285-2d84cd9242ff">
+
+## Method B Daily Mass vs Time average per hour: 
+
+<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/c78085ff-2edf-48ed-b167-323beb4e1bcc">
+
+
+## Method B Monthly average per day Mass vs Time: 
+
+<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/c78085ff-2edf-48ed-b167-323beb4e1bcc">
+
+
+
+
+
+
+
+
+
 
 ## Citations
 
