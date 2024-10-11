@@ -90,26 +90,46 @@ This section provides a detailed explanation of the logic and steps involved in 
 5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
 6. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
 7. **Use Newton Raphson Method to find the number of mols from vander waals equation**
-    # Newton-Raphson Method
+        ### **Method 2:**
 
-    The **Newton-Raphson method** is an iterative algorithm for finding successively better approximations to the roots (or zeroes) of a real-valued function.
+- Approximating the root of a function using the **Newton-Raphson method**:
 
-    The Newton-Raphson formula is defined as:
+$$
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+$$
 
-    $$
-    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-    $$
+Where:
+  - \(x_{n+1}\) = The next approximation of the root
+  - \(x_n\) = The current approximation
+  - \(f(x_n)\) = The value of the function at \(x_n\)
+  - \(f'(x_n)\) = The derivative of the function at \(x_n\)
 
-    Where:
-    - \(x_{n+1}\) is the next approximation,
-    - \(x_n\) is the current approximation,
-    - \(f(x_n)\) is the value of the function at \(x_n\),
-    - \(f'(x_n)\) is the derivative of the function at \(x_n\).
+The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
 
-    The iteration continues until the difference between \(x_{n+1}\) and \(x_n\) is smaller than a predefined tolerance.
-    
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 9. **Propagate the orbit using ODE45 based on two-body dynamics**, including J2 perturbations.
+
+
+
+
+
+
+
+
+
 
 10. **Determine the accuracy of the solution by:**
    - (a) **Generating groundtracks for the satellite**, including coastlines and the desired location on the map.
