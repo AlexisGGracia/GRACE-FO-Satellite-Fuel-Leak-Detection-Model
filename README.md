@@ -18,7 +18,8 @@ This project is part of my undergraduate research at The University of Texas Cen
 
 
 
-During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
+## Estimation of Mass Inside Fuel Tanks
+- During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
 ### **Method A:**
 
