@@ -167,7 +167,7 @@ In this section, I have included the mass versus time plots for the month of Jul
 
 ## Method B Monthly average per day Mass vs Time: 
 
-<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/c78085ff-2edf-48ed-b167-323beb4e1bcc">
+<img width="903" alt="Screenshot 2024-10-11 at 1 27 54 AM" src="https://github.com/user-attachments/assets/e3b8b6da-05c0-45d5-be06-a9f6a3d2ff8d">
 
 
 
