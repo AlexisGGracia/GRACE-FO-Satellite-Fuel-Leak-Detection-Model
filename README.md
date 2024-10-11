@@ -162,7 +162,7 @@ This project is part of my undergraduate research at The University of Texas Cen
   
 - **NASA Level 1A Public Data Access**: You need access to NASA Level 1A public data, available through the [Physical Oceanography Distributed Active Archive Center (PO.DAAC)](https://podaac.jpl.nasa.gov/). You can access the data by creating a free [NASA Earthdata account](https://urs.earthdata.nasa.gov/) and downloading the required datasets from the PO.DAAC repository.
 
-### Closing Statement:
+### Important Information:
 
 - Further information regarding the integration of Markov Chains and usage of this model is currently under development as this is on going research
 
