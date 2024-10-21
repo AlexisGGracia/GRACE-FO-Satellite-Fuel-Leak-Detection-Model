@@ -49,9 +49,9 @@ where:
  ### **Method 2:** 
 
   - Calculating the instantaneous mass inside the fuel tanks using the **Van der Waals modified equation**:
-  - Solve for the number of mols using a numerical method to find the root.
-  - I decided to use Newton Raphson method because when VDW modified equation ir rearranged to find (n), it forms a cubic function with two imaginary roots and one real root (root of interest)
-    and the derivative evaluated at the points is never a number close to zero. Therefore, it converges fast and does not overshoot
+    - Solve for the number of mols using a numerical method to find the root.
+    - I decided to use Newton Raphson method because when VDW modified equation is rearranged to find (n), it forms a cubic function with two imaginary roots and one real root (root of interest)
+      and the derivative evaluated at the points is never a number close to zero. Therefore, it converges fast and does not overshoot
 
 $$
 \left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
