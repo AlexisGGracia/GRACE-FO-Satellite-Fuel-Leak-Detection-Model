@@ -167,7 +167,7 @@ In this section, I have included the mass versus time plots for the month of Jul
 <img width="903" alt="Screenshot 2024-10-11 at 1 27 54 AM" src="https://github.com/user-attachments/assets/e3b8b6da-05c0-45d5-be06-a9f6a3d2ff8d">
 
 ## Important Observations of Results:
-- The plots for mass vs time using method 2 for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temepratures. 
+- The plots for mass vs time using method 2 for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temperatures. 
 
 
 
