@@ -71,7 +71,7 @@ Where:
 
 ## How do we confirm if we have a leak in the fuel system? 
 
-- To confirm if we have a leak, we compare the results from method 1 and method 2. Given that method 1 computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method 2 computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method 1 and 2, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
+- To confirm a leak, we compare results from two methods. Method 1 calculates the expected mass in the fuel tanks assuming no leaks, based solely on the mass exiting through the thrusters. Method 2 measures the current mass in the tanks without considering past states.   If there’s a discrepancy between the two results, it indicates a leak equal to that difference. If the results match, no leak is present.
 
 
 
