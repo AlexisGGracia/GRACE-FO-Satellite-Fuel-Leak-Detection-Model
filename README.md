@@ -4,7 +4,7 @@
 
 In this project, I analyze the evolution of a fuel leak in the GRACE-FO twin satellite. The model considers several key factors, including the mass flow rates of 32 thrusters (16 thrusters per satellite), the time intervals of thruster usage (Δt), activation periods of the thrusters, internal pressure of the tanks (2 tanks per satellite), and the temperature in both the zenith and nadir directions of the fuel tanks.
 
-This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. **The ultimate goal** is to translate these findings into a Markov Chain model to predict future fuel leak behavior, which is crucial for orbit-raising strategies.
+This project aims to study the evolution of the leak, though the model is a work in progress and continuously evolving as I conduct further research. **The ultimate goal** is to translate these findings into a **Markov Chain model** to predict future fuel leak behavior, which is crucial for **orbit-raising strategies.**
 
 ### Important Information:
 
