@@ -21,7 +21,7 @@ This project is part of my undergraduate research at The University of Texas Cen
 ## Estimation of Mass Inside Fuel Tanks
 - During this research, I explore two methods to estimate and verify fuel leaks in the tanks:
 
-### **Method A:**
+### **Method 1:**
 
   - Estimating the ideal mass inside the tanks assuming no leaks, using thruster mass flow rates.
 ### Mass Flow Rate Equation (Solving for Mass):
@@ -46,7 +46,7 @@ where:
 
 
  
- ### **Method B:** 
+ ### **Method 2:** 
 
   - Calculating the instantaneous mass inside the fuel tanks using the **Van der Waals modified equation**:
 
@@ -66,7 +66,7 @@ Where:
 
 ## How do we confirm if we have a leak in the fuel system? 
 
-- To confirm if we have a leak, we compare the results from method A and method B. Given that method A computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method B computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method A and B, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
+- To confirm if we have a leak, we compare the results from method 1 and method 2. Given that method 1 computes the mass that should be in the fuel tanks without any leaks since it only accounts for mass leaving the system through the appropiate output surface (thrusters) using an integrative style and method 2 computes the instantaneous mass in the fuel tanks disregarding previous states, we can compare both results. If there is a difference in the mass estimates between method 1 and 2, we can confirm that we have a leak and the leak is the difference in both methods. If both results are the same, then no leak is present.
 
 
 
@@ -93,10 +93,10 @@ This section provides a detailed explanation of the logic and steps involved in 
      
          
 2. **Developed a function to skip the introduction header that is given for each data file downloaded from NASA po.daac (optional)**
-4. **Extract the pressure from tank A and B to be used for method B**
+4. **Extract the pressure from tank A and B to be used for method 2**
 5. **Extract temperature in the nadir and zenith direction of tanks 1 and 2 to be used for method 2**
 6. **Extract the mass flow rates, and time intervals**
-7. **Use method A to find the ideal mass inside of the fuel tanks**
+7. **Use method 1 to find the ideal mass inside of the fuel tanks**
 8. **Define the variables necessary to implement vander waals modified equation such as constants a and b which are dependent on propellant type being used in propulsion systems**
 9. **Use Newton Raphson Method to find the number of moles from Van der Waals equation**
     - Approximating the root of a Van der Waals modified equation using the **Newton-Raphson method**:
@@ -141,27 +141,27 @@ In this section, I have included the mass versus time plots for the month of Jul
 <img width="1091" alt="Screenshot 2024-10-11 at 1 26 44 AM" src="https://github.com/user-attachments/assets/b80d6c8c-07d3-4c6e-96de-b1ff192a8fc9">
 
     
-## Method A Daily Mass vs Time average per hour: 
+## Method 1 Daily Mass vs Time average per hour: 
 
 
 <img width="935" alt="Screenshot 2024-10-11 at 1 27 07 AM" src="https://github.com/user-attachments/assets/eb262d85-4c27-407b-9a56-e11b1fcf68da">
 
 
-## Method A Monthly average per day Mass vs Time for Tanks C and D: 
+## Method 1 Monthly average per day Mass vs Time for Tanks C and D: 
 
 <img width="835" alt="Screenshot 2024-10-11 at 1 27 38 AM" src="https://github.com/user-attachments/assets/5e37af29-69ad-4e8c-a285-2d84cd9242ff">
 
-## Method B Daily Mass vs Time average per hour: 
+## Method 2 Daily Mass vs Time average per hour: 
 
-<img width="921" alt="July Method B" src="https://github.com/user-attachments/assets/c78085ff-2edf-48ed-b167-323beb4e1bcc">
+<img width="921" alt="July Method 2" src="https://github.com/user-attachments/assets/c78085ff-2edf-48ed-b167-323beb4e1bcc">
 
 
-## Method B Monthly average per day Mass vs Time: 
+## Method 2 Monthly average per day Mass vs Time: 
 
 <img width="903" alt="Screenshot 2024-10-11 at 1 27 54 AM" src="https://github.com/user-attachments/assets/e3b8b6da-05c0-45d5-be06-a9f6a3d2ff8d">
 
 ## Important Observations of Results:
-- The plots for mass vs time using method B for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temepratures. 
+- The plots for mass vs time using method 2 for individual days oscillates. If we take a closer look at the temperature data, we can notice that the temperatures oscillates causing the mass output to oscillate. The reason why the temperature of the satellite is oscillating is due to the rotation of the spacecraft as this motion causes some panels to be in the shadow protected from the sun and other panels to be more directly impacted by the photons. additionally, unpredicted solar storms with an unsteady intensity is another factor influencing the variation in the temepratures. 
 
 
 
