@@ -15,7 +15,7 @@ This repository contains only the initial portion of the research, focusing on t
 
 ## Purpose
 
-This project is part of my undergraduate research at The University of Texas Center for Space Research.
+This project is part of my undergraduate research at The University of Texas Center for Space Research under the invaluable guidance of the distinguished scientist, engineer, and esteemed professor, Dr. Srinivas Bettadpur, whose groundbreaking work in satellite geodesy and Earth science has greatly influenced my academic journey, I have had the privilege to grow both as a student and aspiring engineer. Dr. Bettadpur's mentorship has been instrumental in shaping my understanding of advanced propulsion systems and their potential to revolutionize space exploration.
 
 
 
