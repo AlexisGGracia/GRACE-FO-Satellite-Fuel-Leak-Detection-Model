@@ -63,6 +63,7 @@ Where:
   - \(n\) = Number of moles of gas (mol)
   - \(R\) = Universal gas constant (8.314 J/mol·K)
   - \(T\) = Temperature (K)
+    - In our case, the temperature used is an average of the temp in the zenith and nadir direction combined
   - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
   - \(b\) = Van der Waals constant (m³/mol)
 
