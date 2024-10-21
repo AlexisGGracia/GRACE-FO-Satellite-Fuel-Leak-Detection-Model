@@ -32,7 +32,7 @@ $$
 \dot{m} = \frac{m}{\Delta t}
 $$
 
-To solve for the mass \(m\), we rearrange the equation:
+To solve for the mass \(m\), we rearrange the equation and integrate over a period of time:
 
 $$
 m = \dot{m} \times \Delta t
