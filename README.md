@@ -49,6 +49,7 @@ where:
  ### **Method 2:** 
 
   - Calculating the instantaneous mass inside the fuel tanks using the **Van der Waals modified equation**:
+  - Solve the number of mols using a numerical method to find the root 
 
 $$
 \left( P + \frac{a}{V^2} \right) \left( V - b \right) = nRT
@@ -62,6 +63,8 @@ Where:
   - \(T\) = Temperature (K)
   - \(a\) = Van der Waals constant (Pa·m⁶/mol²)
   - \(b\) = Van der Waals constant (m³/mol)
+
+   
 
 
 ## How do we confirm if we have a leak in the fuel system? 
