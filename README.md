@@ -10,7 +10,7 @@ This project aims to study the evolution of the leak, though the model is a work
 
 - The integration of Markov Chains, in depth details about the propulsion systems, and the application of this model are part of ongoing research and considered classified.
 - Not all data and code files can be shared at this time, pending further notice.
-- As a result, this document provides only a brief summary of the fuel leak model's development to showcase my knowledge of propulsion systems, research methodology, and coding skills.
+- As a result, this document provides only a **brief summary** of the fuel leak model's development to showcase my knowledge of propulsion systems, research methodology, and coding skills.
 
 ## Purpose
 
